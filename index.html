@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UrbanFix - Home Repair Services</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-hammer"></i>
+                UrbanFix
+            </div>
+            <div class="nav-links" id="navLinks">
+                <a href="index.html">Home</a>
+                <a href="electrician.html">Electricians</a>
+                <a href="plumber.html">Plumbers</a>
+                <a href="carpenter.html">Carpenters</a>
+                <a href="painter.html">Painters</a>
+                <a href="#" id="logoutBtn" style="display:none;">Logout</a>
+            </div>
+            <div class="nav-toggle" id="navToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </nav>
+
+    <div class="login-container" id="loginContainer">
+        <div class="login-card">
+            <div class="login-header">
+                <i class="fas fa-user-plus"></i>
+                <h1>Welcome to UrbanFix</h1>
+                <p>Enter your name to get started</p>
+            </div>
+            <form id="loginForm">
+                <div class="input-group">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="userName" placeholder="Your name" required>
+                </div>
+                <button type="submit" class="btn-primary">
+                    <i class="fas fa-arrow-right"></i>
+                    Continue
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <main class="main-content" id="mainContent" style="display:none;">
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Book Trusted Home Repair Experts</h1>
+                <p>Find verified electricians, plumbers, carpenters & painters near you. Fast booking, transparent pricing.</p>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <div class="stat-number">5K+</div>
+                        <div class="stat-label">Happy Customers</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">24h</div>
+                        <div class="stat-label">Avg Response</div>
+                    </div>
+                    <div class="stat">
+                        <div class="stat-number">4.8⭐</div>
+                        <div class="stat-label">Rating</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="services-grid">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Our Services</h2>
+                    <p>Choose from our verified professionals</p>
+                </div>
+                <div class="services-container">
+                    <div class="service-card" onclick="window.location.href='electrician.html'">
+                        <div class="service-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <h3>Electricians</h3>
+                        <p>Wiring, lights, fans & repairs</p>
+                        <button class="btn-secondary">View Workers</button>
+                    </div>
+                    <div class="service-card" onclick="window.location.href='plumber.html'">
+                        <div class="service-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3>Plumbers</h3>
+                        <p>Pipes, leaks & fittings</p>
+                        <button class="btn-secondary">View Workers</button>
+                    </div>
+                    <div class="service-card" onclick="window.location.href='carpenter.html'">
+                        <div class="service-icon">
+                            <i class="fas fa-hammer"></i>
+                        </div>
+                        <h3>Carpenters</h3>
+                        <p>Furniture & woodwork</p>
+                        <button class="btn-secondary">View Workers</button>
+                    </div>
+                    <div class="service-card" onclick="window.location.href='painter.html'">
+                        <div class="service-icon">
+                            <i class="fas fa-paint-roller"></i>
+                        </div>
+                        <h3>Painters</h3>
+                        <p>Interior & exterior painting</p>
+                        <button class="btn-secondary">View Workers</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div id="bookingModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modalTitle">Book Service</h3>
+                <span class="close">&times;</span>
+            </div>
+            <form id="bookingForm">
+                <input type="hidden" id="workerName" />
+                <div class="input-group">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <input type="text" id="address" placeholder="Your address" required>
+                </div>
+                <div class="input-group">
+                    <i class="fas fa-calendar"></i>
+                    <input type="date" id="bookingDate" required>
+                </div>
+                <button type="submit" class="btn-primary full-width">Confirm Booking</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
